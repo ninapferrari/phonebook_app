@@ -116,10 +116,10 @@ module ActiveModel
       #   class Comment
       #     include ActiveModel::Validations
       #
-      #     validate :must_be_friends
+      #     validate :must_be_contacts
       #
-      #     def must_be_friends
-      #       errors.add(:base, 'Must be friends to leave a comment') unless commenter.friend_of?(commentee)
+      #     def must_be_contacts
+      #       errors.add(:base, 'Must be contacts to leave a comment') unless commenter.friend_of?(commentee)
       #     end
       #   end
       #
@@ -129,11 +129,11 @@ module ActiveModel
       #     include ActiveModel::Validations
       #
       #     validate do |comment|
-      #       comment.must_be_friends
+      #       comment.must_be_contacts
       #     end
       #
-      #     def must_be_friends
-      #       errors.add(:base, 'Must be friends to leave a comment') unless commenter.friend_of?(commentee)
+      #     def must_be_contacts
+      #       errors.add(:base, 'Must be contacts to leave a comment') unless commenter.friend_of?(commentee)
       #     end
       #   end
       #
@@ -143,7 +143,7 @@ module ActiveModel
       #     include ActiveModel::Validations
       #
       #     validate do
-      #       errors.add(:base, 'Must be friends to leave a comment') unless commenter.friend_of?(commentee)
+      #       errors.add(:base, 'Must be contacts to leave a comment') unless commenter.friend_of?(commentee)
       #     end
       #   end
       #

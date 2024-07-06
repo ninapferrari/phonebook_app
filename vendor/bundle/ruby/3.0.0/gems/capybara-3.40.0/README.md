@@ -49,7 +49,7 @@ If you and/or your company find value in Capybara and would like to contribute f
     - [Exactness](#exactness)
     - [Strategy](#strategy)
 - [Transactions and database setup](#transactions-and-database-setup)
-- [Asynchronous JavaScript (Ajax and friends)](#asynchronous-javascript-ajax-and-friends)
+- [Asynchronous JavaScript (Ajax and contacts)](#asynchronous-javascript-ajax-and-contacts)
 - [Using the DSL elsewhere](#using-the-dsl-elsewhere)
 - [Calling remote servers](#calling-remote-servers)
 - [Using sessions](#using-sessions)
@@ -442,7 +442,7 @@ expect(page).to have_current_path(post_comments_path(post))
 
 **Note**: You can also assert the current path by testing the value of
 `current_path` directly. However, using the `have_current_path` matcher is
-safer since it uses Capybara's [waiting behaviour](#asynchronous-javascript-ajax-and-friends)
+safer since it uses Capybara's [waiting behaviour](#asynchronous-javascript-ajax-and-contacts)
 to ensure that preceding actions (such as a `click_link`) have completed.
 
 ### <a name="clicking-links-and-buttons"></a>Clicking links and buttons
@@ -907,7 +907,7 @@ Cucumber handles this by using truncation instead of transactions, i.e. they
 empty out the entire database after each test. You can get the same behaviour
 by using a gem such as [database_cleaner](https://github.com/DatabaseCleaner/database_cleaner).
 
-## <a name="asynchronous-javascript-ajax-and-friends"></a>Asynchronous JavaScript (Ajax and friends)
+## <a name="asynchronous-javascript-ajax-and-contacts"></a>Asynchronous JavaScript (Ajax and contacts)
 
 When working with asynchronous JavaScript, you might come across situations
 where you are attempting to interact with an element which is not yet present

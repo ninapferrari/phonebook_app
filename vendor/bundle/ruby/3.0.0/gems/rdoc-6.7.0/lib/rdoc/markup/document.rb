@@ -46,7 +46,7 @@ class RDoc::Markup::Document
       end
     when String then
       raise ArgumentError,
-            "expected RDoc::Markup::Document and friends, got String" unless
+            "expected RDoc::Markup::Document and contacts, got String" unless
         part.empty?
     else
       parts << part

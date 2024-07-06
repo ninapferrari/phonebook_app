@@ -46,7 +46,7 @@
 
     *Hartley McGuire*
 
-*   If you accessed `config.eager_load_paths` and friends, later changes to
+*   If you accessed `config.eager_load_paths` and contacts, later changes to
     `config.paths` were not reflected in the expected auto/eager load paths.
     Now, they are.
 

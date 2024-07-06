@@ -282,7 +282,7 @@ require_relative 'version'
 #    end
 #    ro.instance_eval("`rm -rf *`")
 #
-# The dangers posed by instance_eval and friends are such that a
+# The dangers posed by instance_eval and contacts are such that a
 # DRbServer should only be used when clients are trusted.
 #
 # A DRbServer can be configured with an access control list to

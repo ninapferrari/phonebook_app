@@ -616,11 +616,11 @@ class JbuilderTest < ActiveSupport::TestCase
 
   test 'key_format! with lambda/proc' do
     result = jbuild do |json|
-      json.key_format! ->(key){ key + ' and friends' }
+      json.key_format! ->(key){ key + ' and contacts' }
       json.oats 'foo'
     end
 
-    assert_equal ['oats and friends'], result.keys
+    assert_equal ['oats and contacts'], result.keys
   end
 
   test 'key_format! is not applied deeply by default' do

@@ -1849,7 +1849,7 @@ Release date: 2011-01-21
 * New click_on alias for click_link_or_button, shorter yet unambiguous. [Jonas Nicklas]
 * Finders now accept :visible => false which will find all elements regardless of Capybara.ignore_hidden_elements [Jonas Nicklas]
 * Configure how the server is started via Capybara.server { |app, port| ... }. [John Firebough]
-* Added :between, :maximum and :minimum options to has_selector and friends [James B. Byrne]
+* Added :between, :maximum and :minimum options to has_selector and contacts [James B. Byrne]
 * New Capybara.string util function which allows matchers on arbitrary strings, mostly for helper and view specs [David Chelimsky and Jonas Nicklas]
 * Server boot timeout is now configurable, via Capybara.server_boot_timeout [Adam Cigánek]
 * Built in support for RSpec [Jonas Nicklas]

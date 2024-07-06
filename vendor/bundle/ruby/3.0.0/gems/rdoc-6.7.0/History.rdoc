@@ -1196,7 +1196,7 @@ Special thanks to Thierry Lambert for massive improvements to RDoc.
     Nakada.
   * ri now defaults to the backspace formatter when piped.  Use RI environment
     variable or options to override. Ruby r28455 by Yusuke Endoh.
-  * __send__ and friends no longer get their underscores removed.  Patch by
+  * __send__ and contacts no longer get their underscores removed.  Patch by
     Thierry Lambert.
   * The C parser now makes new public when promoting initialize.
   * Fix crash in #markup_code for TkUnknownChar.
