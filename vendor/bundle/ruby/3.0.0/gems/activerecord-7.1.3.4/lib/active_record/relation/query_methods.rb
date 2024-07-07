@@ -189,14 +189,14 @@ module ActiveRecord
     # You can also specify multiple associations. Each association will result
     # in an additional query:
     #
-    #   User.includes(:address, :contacts).to_a
+    #   User.includes(:address, :friends).to_a
     #   # SELECT "users".* FROM "users"
     #   # SELECT "addresses".* FROM "addresses" WHERE "addresses"."id" IN (1,2,3,4,5)
-    #   # SELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" IN (1,2,3,4,5)
+    #   # SELECT "friends".* FROM "friends" WHERE "friends"."user_id" IN (1,2,3,4,5)
     #
     # Loading nested associations is possible using a Hash:
     #
-    #   User.includes(:address, contacts: [:address, :followers])
+    #   User.includes(:address, friends: [:address, :followers])
     #
     # === Conditions
     #
@@ -256,10 +256,10 @@ module ActiveRecord
     # Loading multiple and nested associations is possible using Hashes and Arrays,
     # similar to #includes:
     #
-    #   User.eager_load(:address, contacts: [:address, :followers])
+    #   User.eager_load(:address, friends: [:address, :followers])
     #   # SELECT "users"."id" AS t0_r0, "users"."name" AS t0_r1, ... FROM "users"
     #   #   LEFT OUTER JOIN "addresses" ON "addresses"."id" = "users"."address_id"
-    #   #   LEFT OUTER JOIN "contacts" ON "contacts"."user_id" = "users"."id"
+    #   #   LEFT OUTER JOIN "friends" ON "friends"."user_id" = "users"."id"
     #   #   ...
     #
     # NOTE: Loading the associations in a join can result in many rows that
@@ -291,10 +291,10 @@ module ActiveRecord
     # Loading multiple and nested associations is possible using Hashes and Arrays,
     # similar to #includes:
     #
-    #   User.preload(:address, contacts: [:address, :followers])
+    #   User.preload(:address, friends: [:address, :followers])
     #   # SELECT "users".* FROM "users"
     #   # SELECT "addresses".* FROM "addresses" WHERE "addresses"."id" IN (1,2,3,4,5)
-    #   # SELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" IN (1,2,3,4,5)
+    #   # SELECT "friends".* FROM "friends" WHERE "friends"."user_id" IN (1,2,3,4,5)
     #   # SELECT ...
     def preload(*args)
       check_if_method_has_arguments!(__callee__, args)

@@ -1774,7 +1774,7 @@ module ActiveRecord
         #
         # Scope examples:
         #   belongs_to :firm, -> { where(id: 2) }
-        #   belongs_to :user, -> { joins(:contacts) }
+        #   belongs_to :user, -> { joins(:friends) }
         #   belongs_to :level, ->(game) { where("game_level > ?", game.current_level) }
         #
         # ==== Options

@@ -195,7 +195,7 @@
     end
     ```
 
-    The standard url_for helper and contacts will now behave as follows:
+    The standard url_for helper and friends will now behave as follows:
 
     ```ruby
     dashboard_path # => /foo/dashboard

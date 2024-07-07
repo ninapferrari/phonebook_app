@@ -26,7 +26,7 @@ module ActiveRecord
     # collection because new records may have been added to the target, etc.
     #
     # If you need to work on all current children, new and existing records,
-    # +load_target+ and the +loaded+ flag are your contacts.
+    # +load_target+ and the +loaded+ flag are your friends.
     class CollectionAssociation < Association # :nodoc:
       # Implements the reader method, e.g. foo.items for Foo.has_many :items
       def reader
