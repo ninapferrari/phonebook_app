@@ -6,32 +6,31 @@
     <th>Name</th>
     <th>Phone</th>
     <th>Notas</th>
-    <th> </th>
+    <th>User Id</th>
+
   </tr>
 </thead>
 
 <tbody>
   <% @contacts.each do |contact| %>
+    <% if contact.user == current_user %>
     <tr>
       <td>
 <%= link_to contact.first_name + ' ' + contact.last_name, contact %>
-
-
       </td>
 
       <td><%= contact.phone %></td>
       <td><%= contact.notes %></td>
-      
-      
-      
-      
-      
-      <td><%= link_to 'Delete', contact, method: :delete, class: "btn btn-outline-danger btn-sm" %>
-      <%= link_to "Edit", edit_contact_path(contact), method: :put, class: "btn btn-outline-danger btn-sm" %>
+      <td><%= contact.user_id %></td>
+
+      <td>
       <%= link_to "Show", contact, method: :get, class: "btn btn-outline-danger btn-sm"  %>
+      <%= link_to "Edit", edit_contact_path(contact), method: :put, class: "btn btn-outline-danger btn-sm" %>
+          <%= link_to 'Delete', contact, method: :delete, class: "btn btn-outline-danger btn-sm" %>
       </td>
       
     </tr>
+    <% end %>
     <% end %>
 </tbody>
 </table>
