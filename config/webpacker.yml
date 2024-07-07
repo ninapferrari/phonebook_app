@@ -1,0 +1,21 @@
+default: &default
+  source_path: app/javascript
+  source_entry_path: packs
+  public_root_path: public
+  public_output_path: packs
+  cache_path: tmp/cache/webpacker
+  check_yarn_integrity: false
+  webpack_compile_output: false
+  extract_css: false
+
+development:
+  <<: *default
+  compile: true
+
+test:
+  <<: *default
+  compile: true
+
+production:
+  <<: *default
+  compile: false

@@ -13,6 +13,7 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 gem "bootsnap", require: false
 gem "webpacker", '~> 5.4.4'
+gem 'devise', '~> 4.9', '>= 4.9.4'
 
 
 
