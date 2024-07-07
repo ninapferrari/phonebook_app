@@ -30,6 +30,10 @@
 
     <%= form.text_area :notes, class:"form-control", placeholder:"Notes" %>
   </div>
+  <div class="field form-group">
+
+  <%= form.number_field :user_id, id: :contact_user_id, value: current_user.id, type: :hidden %> 
+</div>
 </br>
   <div class="actions">
     <%= form.submit class:'btn btn-secondary' %>
