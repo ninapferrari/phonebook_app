@@ -5,7 +5,10 @@ class ContactsController < ApplicationController
 
   # GET /contacts or /contacts.json
   def index
-    @contacts = Contact.all
+    @contacts = current_user.contacts
+    if params[:search]
+      @contacts = @contacts.where('first_name ILIKE ? OR last_name ILIKE ?', "%#{params[:search]}%", "%#{params[:search]}%")
+    end
   end
 
   # GET /contacts/1 or /contacts/1.json
