@@ -1,38 +1,42 @@
+<% if user_signed_in? %>
 <h1>Contacts List</h1>
-
-<table class="table table-striped table-bordered table-hover">
-<thead class="thead-dark">
-  <tr>
-    <th>Name</th>
-    <th>Phone</th>
-    <th>Notas</th>
-    <th>User Id</th>
-
-  </tr>
-</thead>
-
-<tbody>
-  <% @contacts.each do |contact| %>
-    <% if contact.user == current_user %>
+  <table class="table table-striped table-bordered table-hover">
+  <thead class="thead-dark">
     <tr>
-      <td>
-<%= link_to contact.first_name + ' ' + contact.last_name, contact %>
-      </td>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Notas</th>
+      <th>User Id</th>
 
-      <td><%= contact.phone %></td>
-      <td><%= contact.notes %></td>
-      <td><%= contact.user_id %></td>
-
-      <td>
-      <%= link_to "Show", contact, method: :get, class: "btn btn-outline-danger btn-sm"  %>
-      <%= link_to "Edit", edit_contact_path(contact), method: :put, class: "btn btn-outline-danger btn-sm" %>
-          <%= link_to 'Delete', contact, method: :delete, class: "btn btn-outline-danger btn-sm" %>
-      </td>
-      
     </tr>
-    <% end %>
-    <% end %>
-</tbody>
-</table>
+  </thead>
 
-<%= link_to "New contact", new_contact_path, method: :get, class: "btn btn-secondary"%>
+  <tbody>
+    <% @contacts.each do |contact| %>
+      <% if contact.user == current_user %>
+      <tr>
+        <td>
+  <%= contact.first_name + ' ' + contact.last_name %>
+        </td>
+
+        <td><%= contact.phone %></td>
+        <td><%= contact.notes %></td>
+        <td><%= contact.user_id %></td>
+
+        <td>
+        <%= link_to "Show", contact, method: :get, class: "btn btn-outline-danger btn-sm"  %>
+        <%= link_to "Edit", edit_contact_path(contact), method: :put, class: "btn btn-outline-danger btn-sm" %>
+            <%= link_to 'Delete', contact, method: :delete, class: "btn btn-outline-danger btn-sm" %>
+        </td>
+        
+      </tr>
+      <% end %>
+      <% end %>
+  </tbody>
+  </table>
+
+  <%= link_to "New contact", new_contact_path, method: :get, class: "btn btn-secondary"%>
+
+<% else %>
+  <h1>Welcome to Phonebook App</h1>
+<% end %>
