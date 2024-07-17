@@ -5,9 +5,13 @@ class ContactsController < ApplicationController
 
   # GET /contacts or /contacts.json
   def index
-    @contacts = current_user.contacts
-    if params[:search]
-      @contacts = @contacts.where('first_name ILIKE ? OR last_name ILIKE ?', "%#{params[:search]}%", "%#{params[:search]}%")
+    if current_user
+      @contacts = current_user.contacts
+      if params[:search]
+        @contacts = @contacts.where('first_name ILIKE ? OR last_name ILIKE ?', "%#{params[:search]}%", "%#{params[:search]}%")
+      end
+    else
+      redirect_to new_user_session_path, notice: 'You need to sign in or sign up before continuing.'
     end
   end
 
@@ -17,7 +21,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts/new
   def new
-    @contact  = current_user.contacts.build
+    @contact = current_user.contacts.build
   end
 
   # GET /contacts/1/edit
@@ -26,7 +30,7 @@ class ContactsController < ApplicationController
 
   # POST /contacts or /contacts.json
   def create
-    @contact  = current_user.contacts.build(contact_params)
+    @contact = current_user.contacts.build(contact_params)
 
     respond_to do |format|
       if @contact.save
@@ -67,10 +71,10 @@ class ContactsController < ApplicationController
     if @contact.nil?
       redirect_to contacts_path, notice: "Not Authorized To Edit This Contact"
     end
-  end  
-
+  end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_contact
       @contact = Contact.find(params[:id])
@@ -78,6 +82,6 @@ class ContactsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contact_params
-      params.require(:contact).permit(:first_name, :last_name, :phone, :notes,  :user_id)
+      params.require(:contact).permit(:first_name, :last_name, :phone, :notes, :user_id)
     end
 end

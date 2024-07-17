@@ -1,6 +1,6 @@
-<%= form_with(model: contact, local: true) do |form| %>
+<%= form_with(model: contact) do |form| %>
   <% if contact.errors.any? %>
-    <div id="error_explanation">
+    <div style="color: red">
       <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
 
       <ul>
@@ -11,27 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+  <div class="field form-group">
+  <% form.label :first_name %>
+    <%= form.text_field :first_name, class:"form-control", placeholder:"First Name" %>
   </div>
+  </br>
+  <div class="field form-group">
 
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+    <%= form.text_field :last_name, class:"form-control", placeholder:"Last Name" %>
   </div>
+  </br>
+  <div class="field form-group">
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
+    <%= form.text_field :phone, class:"form-control", placeholder:"Phone" %>
   </div>
+  </br>
+  <div class="field form-group">
 
-  <div class="field">
-    <%= form.label :notes %>
-    <%= form.text_area :notes %>
+    <%= form.text_area :notes, class:"form-control", placeholder:"Notes" %>
   </div>
+  <div class="field form-group">
 
+  <%= form.number_field :user_id, id: :contact_user_id, value: current_user.id, type: :hidden %> 
+</div>
+</br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:'btn btn-secondary' %>
   </div>
+  </br>
 <% end %>
