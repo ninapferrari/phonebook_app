@@ -18,7 +18,10 @@ gem 'devise', '~> 4.9', '>= 4.9.4'
 
 
 group :development, :test do
+  gem "rspec-rails", "~> 6.1"
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -28,4 +31,6 @@ end
 group :test do
   gem "capybara"
   gem "selenium-webdriver"
+  gem "simplecov", "~> 0.22.0", :require => false
+  gem "simplecov_json_formatter", "~> 0.1.4", :require => false
 end
