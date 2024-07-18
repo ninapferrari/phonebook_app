@@ -18,4 +18,5 @@ production:
   database: phonebook_d2_production
   username: phonebook_d2_production_user
   password: 0ArRVGnMxmAZPhspxr9iUBDibRJANFnP
-  host: 5432
+  host: dpg-cqch9408fa8c73cq817g-a
+  port: 5432
