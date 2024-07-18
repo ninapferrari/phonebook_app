@@ -1,5 +1,5 @@
 current directory: /home/nina/Área de Trabalho/ruby_projects/phonebook_d2/vendor/bundle/ruby/3.0.0/gems/bcrypt-3.1.20/ext/mri
-/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240718-47098-8dou42.rb extconf.rb
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240718-52156-7cc3pp.rb extconf.rb
 creating Makefile
 
 current directory: /home/nina/Área de Trabalho/ruby_projects/phonebook_d2/vendor/bundle/ruby/3.0.0/gems/bcrypt-3.1.20/ext/mri
@@ -19,4 +19,4 @@ linking shared-object bcrypt_ext.so
 
 current directory: /home/nina/Área de Trabalho/ruby_projects/phonebook_d2/vendor/bundle/ruby/3.0.0/gems/bcrypt-3.1.20/ext/mri
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20240718-47098-n89icu
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20240718-52156-v5s7hf

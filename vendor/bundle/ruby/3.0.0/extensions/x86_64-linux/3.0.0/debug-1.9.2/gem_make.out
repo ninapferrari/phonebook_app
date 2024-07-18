@@ -1,5 +1,5 @@
 current directory: /home/nina/Área de Trabalho/ruby_projects/phonebook_d2/vendor/bundle/ruby/3.0.0/gems/debug-1.9.2/ext/debug
-/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240718-47098-88mgtb.rb extconf.rb
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240718-52156-irjwje.rb extconf.rb
 creating Makefile
 
 current directory: /home/nina/Área de Trabalho/ruby_projects/phonebook_d2/vendor/bundle/ruby/3.0.0/gems/debug-1.9.2/ext/debug
@@ -13,4 +13,4 @@ linking shared-object debug/debug.so
 
 current directory: /home/nina/Área de Trabalho/ruby_projects/phonebook_d2/vendor/bundle/ruby/3.0.0/gems/debug-1.9.2/ext/debug
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 debug.so ./.gem.20240718-47098-zec8na/debug
+/usr/bin/install -c -m 0755 debug.so ./.gem.20240718-52156-y65b9v/debug
