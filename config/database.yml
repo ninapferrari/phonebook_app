@@ -16,3 +16,6 @@ test:
 production:
   <<: *default
   database: phonebook_d2_production
+  username: phonebook_d2_production_user
+  password: 0ArRVGnMxmAZPhspxr9iUBDibRJANFnP
+  host: 5432
