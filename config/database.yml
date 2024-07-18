@@ -17,11 +17,3 @@ test:
   username: nina
   password: secret
   host: localhost
-
-production:
-  <<: *default
-  database: phonebook_d2_production
-  username: phonebook_d2_production_user
-  password: 0ArRVGnMxmAZPhspxr9iUBDibRJANFnP
-  host: dpg-cqch9408fa8c73cq817g-a
-  port: 5432
