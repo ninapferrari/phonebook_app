@@ -1,5 +1,5 @@
 current directory: /home/nina/Área de Trabalho/ruby_projects/phonebook_d2/vendor/bundle/ruby/3.0.0/gems/nio4r-2.7.3/ext/nio4r
-/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240706-291256-cbx3mq.rb extconf.rb
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240707-80976-7g1jl2.rb extconf.rb
 checking for unistd.h... yes
 checking for rb_io_descriptor()... no
 checking for linux/aio_abi.h... yes
@@ -47,4 +47,4 @@ linking shared-object nio4r_ext.so
 
 current directory: /home/nina/Área de Trabalho/ruby_projects/phonebook_d2/vendor/bundle/ruby/3.0.0/gems/nio4r-2.7.3/ext/nio4r
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20240706-291256-282hm2
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20240707-80976-pl8a3j
