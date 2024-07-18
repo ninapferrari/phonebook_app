@@ -13,7 +13,6 @@ gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[mswin mswin64 mingw x64_mingw jruby]
-gem 'webpacker', '~> 5.4.4'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mswin mswin64 mingw x64_mingw]
