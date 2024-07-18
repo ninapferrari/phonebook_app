@@ -1,5 +1,5 @@
 current directory: /home/nina/Área de Trabalho/ruby_projects/phonebook_d2/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.6/ext/websocket-driver
-/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240707-80976-uwt40b.rb extconf.rb
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240718-47098-qi4gxr.rb extconf.rb
 creating Makefile
 
 current directory: /home/nina/Área de Trabalho/ruby_projects/phonebook_d2/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.6/ext/websocket-driver
@@ -12,4 +12,4 @@ linking shared-object websocket_mask.so
 
 current directory: /home/nina/Área de Trabalho/ruby_projects/phonebook_d2/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.6/ext/websocket-driver
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20240707-80976-jvx34x
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20240718-47098-zg3jjc
