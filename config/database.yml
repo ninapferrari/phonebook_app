@@ -12,3 +12,7 @@ development:
 test:
   <<: *default
   database: phonebook_d2_test
+
+production:
+  <<: *default
+  database: phonebook_d2_production
