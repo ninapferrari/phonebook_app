@@ -1,17 +1,22 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: nina
-  password: secret
-  host: localhost
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
 
 development:
   <<: *default
   database: phonebook_d2_development
+  username: nina
+  password: secret
+  host: localhost
 
 test:
   <<: *default
   database: phonebook_d2_test
+  username: nina
+  password: secret
+  host: localhost
 
 production:
   <<: *default
