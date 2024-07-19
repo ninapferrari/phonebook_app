@@ -16,6 +16,7 @@ This is a phonebook application that allows users to access, retrieve passwords,
 - Rails 7.1.3.4
 - PostgreSQL
 - Bundler
+- Nodejs
 - Yarn
 
 ### Steps
