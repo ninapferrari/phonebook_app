@@ -1,6 +1,6 @@
-	### README.md
-
 # Phonebook Application
+
+![Phonebook](images/phonebook.png)
 
 You can access the application [here](https://phonebook-app-2xtx.onrender.com/)
 
